@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager App</title>
+  <link rel="stylesheet" href="/inter_project/add_task_event/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login and Signup Section -->
+    <div class="auth-container">
+      <h2 id="authTitle">Sign Up</h2>
+      <div id="authForm">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="handleAuth()">Sign Up</button>
+        <p>Already have an account? <span onclick="toggleAuth()">Login</span></p>
+      </div>
+    </div>
+
+    <!-- Task Manager Section -->
+    <div class="task-manager-container hidden">
+      <div class="task-filter">
+        <button onclick="filterTasks('all')">All</button>
+        <button onclick="filterTasks('completed')">Completed</button>
+        <button onclick="filterTasks('pending')">Pending</button>
+      </div>
+      <div class="task-input">
+        <input type="text" id="taskInput" placeholder="Enter a new task">
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <div id="taskList" class="task-list"></div>
+    </div>
+  </div>
+
+  <script src="/inter_project/add_task_event/script.js"></script>
+</body>
+</html>
